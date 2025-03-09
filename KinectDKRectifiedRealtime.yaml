@@ -54,7 +54,7 @@ Kinect.resolution: 720
 
 # Run rgbd_azure_kinect_dk once and adjust Camera width, height, fx, cx, fy, cy to the values which the program prints 
 # Then set this value to 1
-Adjusted: 1
+Adjusted: 0
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters

@@ -1,6 +1,6 @@
 ## Compile
-1. Make sure you have installed K4A SDK
-2. put rgbd_azure_kinect_dk.cc and KinectDKRectifiedRealtime.yaml into ORBSLAM3/Example/RGB-D/
+1. Make sure you have installed K4A SDK  
+2. put rgbd_azure_kinect_dk.cc and KinectDKRectifiedRealtime.yaml into ORBSLAM3/Example/RGB-D/  
 2. Add to your CMakeLists in ORB_SLAM3:
 ```cmake
 find_package(k4a)
@@ -19,9 +19,9 @@ target_link_libraries(
 
 add_executable(rgbd_azure_kinect_dk
             Examples/RGB-D/rgbd_azure_kinect_dk.cc)
-    target_link_libraries(rgbd_azure_kinect_dk ${PROJECT_NAME})
+target_link_libraries(rgbd_azure_kinect_dk ${PROJECT_NAME})
 ```
-3. run build.sh in ORBSLAM3
+3. run build.sh in ORBSLAM3  
 
 ## Usage
 ```bash
@@ -31,7 +31,7 @@ For example, use the config file KinectDKRectifiedRealtime.yaml
 ```bash
 Examples/RGB-D/rgbd_azure_kinect_dk Vocabulary/ORBvoc.txt KinectDKRectifiedRealtime.yaml
 ```
-before running the command, ensure the Kinect camera is properly connected and drivers are installed.
+before running the command, ensure the Kinect camera is properly connected and drivers are installed.  
 
 ## Notice
 Three new parameters used for Kinect devices are added into the config file:
@@ -40,8 +40,8 @@ Kinect.depthmod: "nfov"
 Kinect.resolution: 720
 Adjusted: 0
 ```
-Open KinectDKRectifiedRealtime.yaml to see valid values
-Each time you change Kinect.depthmod or Kinect.resolution, you should set Adjusted to 0
-Run the program once, it will print new Camera width, height, fx, cx, fy, cy
-Change Camera1.fx Camera1.cx Camera1.fy Camera1.cy Camera.width Camera.height to proper value and set Adjusted to 1
-Then you can run this program
+Open KinectDKRectifiedRealtime.yaml to see valid values.  
+Each time you change Kinect.depthmod or Kinect.resolution, you should set Adjusted to 0.  
+Run the program once, it will print new Camera width, height, fx, cx, fy, cy.  
+Change Camera1.fx Camera1.cx Camera1.fy Camera1.cy Camera.width Camera.height to proper value and set Adjusted to 1.  
+Then you can run this program.  
