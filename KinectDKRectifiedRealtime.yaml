@@ -1,0 +1,92 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "Rectified"
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera1.fx: 642.1368408203125
+Camera1.fy: 641.9959716796875
+Camera1.cx: 639.783887599333
+Camera1.cy: 367.6417199215502
+
+# You can delete the 4 lines below
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+
+# 720P  : 1280 * 720    16:9
+# 1080P : 1920 * 1080   16:9
+# 1440P : 2560 * 1440   16:9
+# 1536P : 2048 * 1536   4:3
+# 2160P : 3840 * 2160   16:9
+# 3072P : 4096 * 3072   4:3
+Camera.width: 1280
+Camera.height: 720
+
+# Camera frames per second 
+Camera.fps: 30
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+# Kinect color camera use BGR mode
+Camera.RGB: 0
+
+# Close/Far threshold. Baseline times.
+Stereo.ThDepth: 40.0
+Stereo.b: 0.07732
+
+# Depth map values factor
+RGBD.DepthMapFactor: 1000.0
+
+#--------------------------------------------------------------------------------------------
+# Kinect Parameters
+#--------------------------------------------------------------------------------------------
+
+# Kinect camera depth mode (Valid options: nfov, nfov2x2, wfov, wfov2x2)
+Kinect.depthmod: "nfov"
+
+# Kinect camera resolution (Valid options: 720P, 1080P, 1440P, 1536P, 2160P, 3072P)
+Kinect.resolution: 720
+
+# Run rgbd_azure_kinect_dk once and adjust Camera width, height, fx, cx, fy, cy to the values which the program prints 
+# Then set this value to 1
+Adjusted: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+
