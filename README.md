@@ -1,6 +1,7 @@
 ## Compile
 1. Make sure you have installed K4A SDK  
-2. put rgbd_azure_kinect_dk.cc and KinectDKRectifiedRealtime.yaml into ORBSLAM3/Example/RGB-D/  
+2. put rgbd_azure_kinect_dk.cc and KinectDKRectifiedRealtime.yaml into ORBSLAM3/Example/RGB-D/
+   put mono_azure_kinect_dk.cc and KinectDKRectifiedRealtime.yaml into ORBSLAM3/Example/Monocular/  
 2. Add to your CMakeLists in ORB_SLAM3:
 ```cmake
 find_package(k4a)
@@ -16,6 +17,9 @@ target_link_libraries(
     ${K4A_LIBS}
 )
 
+add_executable(mono_azure_kinect_dk
+            Examples/Monocular/mono_azure_kinect_dk.cc)
+    target_link_libraries(mono_azure_kinect_dk ${PROJECT_NAME})
 
 add_executable(rgbd_azure_kinect_dk
             Examples/RGB-D/rgbd_azure_kinect_dk.cc)
