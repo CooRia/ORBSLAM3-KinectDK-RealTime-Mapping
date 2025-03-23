@@ -1,41 +1,41 @@
 /******************************************************************************
- * 文件: rgbd_azure_kinect_dk.cpp
+ * 文件: mono_azure_kinect_dk.cpp
  *
- * 本程序基于ORBSLAM3框架，使用Kinect相机进行实时的RGB-D建图。程序通过读取Kinect相机的
- * RGB图像和深度图像，利用ORBSLAM3算法进行实时的三维环境重建与定位。
+ * 本程序基于ORBSLAM3框架，使用Kinect相机进行实时的单目建图。程序通过读取Kinect相机的
+ * RGB图像，利用ORBSLAM3算法进行实时的三维环境重建与定位。
  * 该程序参考了BAD-SLAM对于azure kinect相机的输入处理。
  *
  * 用法:
- * ./rgbd_azure_kinect_dk path_to_vocabulary path_to_settings (trajectory_file_name)
+ * ./mono_azure_kinect_dk path_to_vocabulary path_to_settings (trajectory_file_name)
  *
  * 注意:
  * 1. 在CMakeLists中添加azure kinect的依赖(k4a)。
  * 2. 确保Kinect相机正确连接并驱动正常。
  * 3. 运行时请确保有足够的计算资源以保持实时性。
  *
- * - 2025.3.9
+ * - 2025.3.23
  *
  ******************************************************************************/
 
 /******************************************************************************
- * File: rgbd_azure_kinect_dk.cpp
+ * File: mono_azure_kinect_dk.cpp
  *
  * Description:
  * This program is based on the ORBSLAM3 framework and uses a Kinect camera for
- * real-time RGB-D mapping. The program reads RGB and depth images from the Kinect
+ * real-time Monocular mapping. The program reads RGB images from the Kinect
  * camera and utilizes the ORBSLAM3 algorithm for real-time 3D environment
  * reconstruction and localization.
  * The program references the input processing of the Azure Kinect camera from BAD-SLAM.
  *
  * Usage:
- * ./rgbd_azure_kinect_dk path_to_vocabulary path_to_settings (trajectory_file_name)
+ * ./mono_azure_kinect_dk path_to_vocabulary path_to_settings (trajectory_file_name)
  *
  * Notes:
  * 1. Add the Azure Kinect dependency (k4a) in CMakeLists.txt.
  * 2. Ensure the Kinect camera is properly connected and drivers are installed.
  * 3. Ensure sufficient computational resources are available for real-time performance.
  *
- * - 2025.3.9
+ * - 2025.3.23
  ******************************************************************************/
 
 #include <iostream>
