@@ -47,7 +47,7 @@ RGBD.DepthMapFactor: 1000.0
 #--------------------------------------------------------------------------------------------
 
 # Kinect camera depth mode (Valid options: nfov, nfov2x2, wfov, wfov2x2)
-Kinect.depthmod: "nfov"
+Kinect.depthmode: "nfov"
 
 # Kinect camera resolution (Valid options: 720P, 1080P, 1440P, 1536P, 2160P, 3072P)
 Kinect.resolution: 720

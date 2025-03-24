@@ -40,7 +40,7 @@ before running the command, ensure the Kinect camera is properly connected and d
 ## Notice
 Three new parameters used for Kinect devices are added into the config file:
 ```yaml
-Kinect.depthmod: "nfov"
+Kinect.depthmode: "nfov"
 Kinect.resolution: 720
 Adjusted: 0
 ```
